@@ -6,28 +6,6 @@
 
 *Alpha Vantage → Kafka → PostgreSQL — captured as it moves, not after it settles.*
 
-<br/>
-
-```
-  market tick
-       │
-       ▼
-┌─────────────┐     ┌──────────────┐     ┌─────────────┐
-│  producer   │────▶│    Kafka     │────▶│  consumer   │
-│  (Python)   │     │  Confluent   │     │  (Python)   │
-└─────────────┘     └──────────────┘     └──────┬──────┘
-                                                │
-                                                ▼
-                                         ┌─────────────┐
-                                         │ PostgreSQL  │
-                                         │   (Aiven)   │
-                                         └─────────────┘
-```
-
-</div>
-
----
-
 ## Why this exists
 
 Markets don't wait for nightly batch jobs. Prices move in minutes — sometimes seconds — and a pipeline that only wakes up at midnight is already late.
