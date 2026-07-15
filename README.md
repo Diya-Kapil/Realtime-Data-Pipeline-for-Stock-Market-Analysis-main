@@ -29,24 +29,23 @@ Markets don't wait for nightly batch jobs. Prices move in minutes — sometimes 
 
 <img width="1600" height="866" alt="image" src="https://github.com/user-attachments/assets/83ab9661-e139-4523-a9f9-526e73c9e4f6" />
 
-
 ### 2. Stream
 
 Kafka on Confluent Cloud is the spine — it buffers, orders, and fans out messages between producer and consumer without either side knowing the other's schedule.
 
-![Kafka topic](https://github.com/user-attachments/assets/4d0fe560-8536-40e3-ac4e-bb3a7dca0bf5)
+<img width="1600" height="859" alt="image" src="https://github.com/user-attachments/assets/1cdf61cc-e3d4-4158-8280-d6f497698336" />
 
 ### 3. Consume & land
 
 `consumer.py` polls `topic_0`, parses OHLCV fields, and upserts rows into `tbl_messages` on Aiven Postgres. The table is created on first connect if it isn't already there.
 
-![Consumer writing to Postgres](https://github.com/user-attachments/assets/39d358a4-c58c-4320-8d53-01571723c621)
+<img width="1600" height="866" alt="image" src="https://github.com/user-attachments/assets/da7a5844-76a0-43c7-8e01-b12134bc2f50" />
 
 ### 4. Ask questions
 
 Once tick data is in Postgres, SQL does the rest — aggregations, windows, and spot checks against live market movement.
 
-![Querying stock data](https://github.com/user-attachments/assets/fa0f1344-5577-4778-8d00-0c472e3ce2a2)
+<img width="1600" height="867" alt="image" src="https://github.com/user-attachments/assets/08d459e8-722b-43f4-85a6-70ad45c5e65f" />
 
 ---
 
