@@ -27,7 +27,8 @@ Markets don't wait for nightly batch jobs. Prices move in minutes — sometimes 
 
 `producer.py` hits Alpha Vantage for 5-minute IBM bars, serializes each candle as JSON, and publishes to `topic_0`. Delivery is confirmed via a callback so dropped messages don't vanish silently.
 
-![Producer in action](https://github.com/user-attachments/assets/a899c165-2f84-4809-9f50-7c04b6fa5a93)
+blob:https://web.whatsapp.com/8aaf0d4e-bac8-4970-8c89-00e96dbaf6ef<img width="1600" height="866" alt="image" src="https://github.com/user-attachments/assets/83ab9661-e139-4523-a9f9-526e73c9e4f6" />
+
 
 ### 2. Stream
 
